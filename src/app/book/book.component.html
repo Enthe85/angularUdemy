@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card-title">
+        <h1>Book Management System</h1>
+        <div class="col-12">
+            <div>
+                <input [(ngModel)]="newBookCompomentTitle" placeholder="Buch Titel eingeben" style="text-align: center; width: 13rem;margin-right: 10px;">
+
+                <input [(ngModel)]="newBookCompomentAuthor" placeholder="Autor des Buches eingeben" style="text-align: center; width: 13rem;margin-right: 10px;">
+
+                <button class="btn btn-success" (click)="addBookTitel()" style="padding-top: 3px; padding-bottom: 3px;">Add Book</button>
+            </div>
+
+            <li *ngFor="let books of bookcomponents" >
+                {{books.title}} - {{books.author}}
+                <button class="btn btn-warning " (click)="deleteBookcomponent(books)" style="padding-top: 0px; padding-bottom: 0px;margin-left: 5px;">Löschen</button>
+            </li>
+        </div>
+    </div>
+</div>
